@@ -4,17 +4,17 @@ This script attempts to search for people in pictures by comparing all faces in 
 ### Installing
 This script depends on [face_recognition](https://github.com/ageitgey/face_recognition) for all the heavy lifting.
 Install it first by running:
-```bash
+```
 $ pip install face_recognition
 ```
 Afterwards, clone this Git repository or download the script separatly:
-```bash
+```
 $ git clone https://github.com/jmetrius/FaceRecSearch.git
 $ cd FaceRecSearch
 ```
 
 ## Usage
-```bash
+```
 $ python FaceRecSearch.py [-h] [--tolerance 0.6] [--cpus CPUS] [--recursive] sourcedir outputdir facedir
 
 FaceRecSearch - Quick and dirty image search using facial recognition
