@@ -55,9 +55,9 @@ class FaceRecSearch:
             print('ERROR: faces directory must contain image files')
             sys.exit(1)
 
-        self.cpus = _options.cpus
+        self.cpus = int(_options.cpus)
         self.recursive = _options.recursive
-        self.tolerance = _options.tolerance
+        self.tolerance = float(_options.tolerance)
 
         self.processed_face_encodings = []
 
@@ -130,7 +130,7 @@ if __name__ == '__main__':
     parser.add_argument('facedir', help='directory containing examples of the face you are looking for')
     parser.add_argument('--tolerance', default=0.6, help='distance between faces to consider it a match, lower is more strict.', metavar='0.6')
     parser.add_argument('--cpus', default=os.cpu_count(), help="number of CPUs to use, defaults to all")
-    parser.add_argument('--recursive', action='store_false', help='search in all subdirectories of sourcedir')
+    parser.add_argument('--recursive', action='store_true', help='search in all subdirectories of sourcedir')
     options = parser.parse_args()
 
     if not (options.sourcedir and options.outputdir and options.facedir):
