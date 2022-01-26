@@ -30,7 +30,7 @@ class FaceRecSearch:
             print('ERROR: source directory must contain image files')
             sys.exit(1)
 
-        if _options.targetdir:
+        if _options.outputdir:
             self.target_directory = os.path.abspath(_options.outputdir)
         else:
             parser.print_help()
