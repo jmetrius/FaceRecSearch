@@ -33,8 +33,8 @@ options:
 
 ## Additional hints
 * The default tolerance is based on the recommendations of the face_recognition module. For my use case, a stricter setting of 0.45 was better but your experience might differ.
-* If a picture in facedir contains faces of multiple people, only the first one will be used. This might lead to unexpected behaviour, therefore make sure only one face is visible in each example picture.
-* It's advisable to place multiple example pictures of the same person (showing the face in different angles or with different expressions) in facedir. You can also place pictures of different people if you want to search for more than one person at once. However, since every example face is compared with all faces of pictures in the sourcedir, runtime may increase drastically with additional faces. 2-3 pictures per person should be enough.
+* If a picture in facedir contains faces of multiple people, only the first one will be used. This might lead to unexpected behaviour, therefore make sure only one face is visible in each example picture. If more than one face is detected, a warning will be displayed.
+* It's advisable to place multiple example pictures of the same person (showing the face in different angles or with different expressions) in facedir. You can also place pictures of different people if you want to search for more than one person at once. However, since every example face is compared with all faces of pictures in the sourcedir, runtime may increase drastically with additional faces. 2-3 pictures per person should be enough for acceptable results.
 
 ## Credits
 Credit goes to greatwhitehat for providing [faceoff](https://github.com/greatwhitehat/faceoff) which served as the inital codebase for this script.
